@@ -1,12 +1,64 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Portfolio Test</title>
+<title>Tom Cutler Portfolio</title>
 {% endblock %}
 
 {% block body %}
-<div class="content" style="text-align: center">
-    <h1>Welcome to my Portfolio!</h1>
-    <h2>2</h2>
+<div class="content">
+<header>
+  <h1>Tom Cutler Portfolio</h1>
+</header>
+
+<nav>
+  <a href="#test">Home</a> |
+  <a href="/">Project</a> |
+  <a href="/">Project</a> |
+  <a href="/">Project</a>
+</nav>
+
+<hr>
+
+<main>
+  <h2 id="test">Welcome to my Portfolio.</h2>
+    <p>You can learn more about how to build and deploy your new website by reading the  <a href="https://www.bridgetownrb.com/docs">Bridgetown documentation</a>.</p>
+    <p>You can choose a <a href="https://github.com/topics/bridgetown-theme">theme</a> or add some <a href="https://www.bridgetownrb.com/plugins/">plugins</a> to get started quickly.</p>
+    <p>Be sure to check out the <a href="https://bridgetown.cards">Bridgetown Cards</a> community site for helpful tips &amp; tricks.</p>
+    <p>If you run into any issues or have additional questions, please join us in our <a href="https://discord.gg/4E6hktQGz4">Discord chat</a> or in <a href="https://github.com/bridgetownrb/bridgetown/discussions">GitHub discussions</a>.</p>
+    <p><em>Have fun and <strong>good luck</strong>!</em></p>
+    <p><em>Have fun and <strong>good luck</strong>!</em></p>
+    <p><em>Have fun and <strong>good luck</strong>!</em></p>
+    <p><em>Have fun and <strong>good luck</strong>!</em></p>
+    <p><em>Have fun and <strong>good luck</strong>!</em></p>
+</main>
+
+<footer>
+  Built with Python and Flask. Deployed with Frozen-Flask and GitHub Pages.
+  <br>
+  Contact me at <a href="mailto:your-email@example.com">your-email@example.com</a>
+</footer>
 </div>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
 {% endblock %}
