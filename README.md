@@ -1,6 +1,6 @@
 # Portfolio
 
-This is a simple portfolio site built using Python to present myself and my work in a clear and straightforward manner. The site includes a full copy of my CV as well as a set of personal projects covering a variety of topics, including data analysis, software automation, game development, and image manipulation. Each project has its own tab with a description and a link to its GitHub repository.
+This is a simple [portfolio site](https://tcutler96.github.io/Portfolio/) built using Python to present myself and my work in a clear and straightforward manner. The site includes a full copy of my CV as well as a set of personal projects covering a variety of topics, including data analysis, software automation, game development, and image manipulation. Each project has its own page with a description and a link to its respective GitHub repository.
 
 ## Tech Used
 
