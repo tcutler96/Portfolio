@@ -7,6 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <script src="/Portfolio/static/js/main.js"></script>
     <link rel="stylesheet" href="/Portfolio/static/css/main.css">
+    <link rel="shortcut icon" href="/Portfolio/static/favicon.ico">
     
 <title>Tom Cutler Portfolio</title>
 
@@ -15,61 +16,166 @@
 <body>
     
 <div class="content">
-<header>
-  <h1>Tom Cutler Portfolio</h1>
-</header>
-
-<nav>
-  <a href="#test">Home</a> |
-  <a href="/">Project</a> |
-  <a href="/">Project</a> |
-  <a href="/">Project</a>
-</nav>
-
-<hr>
-
-<main>
-  <h2 id="test">Welcome to my Portfolio.</h2>
-    <p>You can learn more about how to build and deploy your new website by reading the  <a href="https://www.bridgetownrb.com/docs">Bridgetown documentation</a>.</p>
-    <p>You can choose a <a href="https://github.com/topics/bridgetown-theme">theme</a> or add some <a href="https://www.bridgetownrb.com/plugins/">plugins</a> to get started quickly.</p>
-    <p>Be sure to check out the <a href="https://bridgetown.cards">Bridgetown Cards</a> community site for helpful tips &amp; tricks.</p>
-    <p>If you run into any issues or have additional questions, please join us in our <a href="https://discord.gg/4E6hktQGz4">Discord chat</a> or in <a href="https://github.com/bridgetownrb/bridgetown/discussions">GitHub discussions</a>.</p>
-    <p><em>Have fun and <strong>good luck</strong>!</em></p>
-    <p><em>Have fun and <strong>good luck</strong>!</em></p>
-    <p><em>Have fun and <strong>good luck</strong>!</em></p>
-    <p><em>Have fun and <strong>good luck</strong>!</em></p>
-    <p><em>Have fun and <strong>good luck</strong>!</em></p>
-</main>
-
-<footer>
-  Built with Python and Flask. Deployed with Frozen-Flask and GitHub Pages.
-  <br>
-  Contact me at <a href="mailto:your-email@example.com">your-email@example.com</a>
-</footer>
+    <header>
+        <h1>Tom Cutler Portfolio</h1>
+    </header>
 </div>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+<!--    <button class="tablinks" onclick="changeTab(event, 'Home')" id="defaultOpen">Home</button>-->
+    
+        <button class="tablinks" onclick="changeTab(event, 'Welcome')" id="Welcome_tab">Welcome</button>
+    
+        <button class="tablinks" onclick="changeTab(event, 'CV')" id="CV_tab">CV</button>
+    
+        <button class="tablinks" onclick="changeTab(event, 'ML Football Analysis')" id="ML Football Analysis_tab">ML Football Analysis</button>
+    
+        <button class="tablinks" onclick="changeTab(event, 'Finance Data Automation')" id="Finance Data Automation_tab">Finance Data Automation</button>
+    
+        <button class="tablinks" onclick="changeTab(event, 'Step I Must')" id="Step I Must_tab">Step I Must</button>
+    
+        <button class="tablinks" onclick="changeTab(event, 'Covid-19 Time Series')" id="Covid-19 Time Series_tab">Covid-19 Time Series</button>
+    
+        <button class="tablinks" onclick="changeTab(event, 'Image Paint')" id="Image Paint_tab">Image Paint</button>
+    
 </div>
 
-<!-- Tab content -->
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
+    <div id="Welcome" class="tabcontent">
+        <main>
+            <h1><a href="https://github.com/tcutler96/Portfolio">Welcome to my portfolio</a></h1>
+<p>Here you will find cv as well as a number of projects covering many topics/ domains, use the tabs at the top to switch between them.</p>
+<p>Each title (including this one) links to the GitHub page where the code can be inspected.</p>
 
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
+        </main>
+    </div>
 
+    <div id="CV" class="tabcontent">
+        <main>
+            <h1><a href="static/projects/CV/CV.pdf" CV>CV</a></h1>
+
+<p><embed src="static/projects/CV/CV.pdf"></p>
+
+        </main>
+    </div>
+
+    <div id="ML Football Analysis" class="tabcontent">
+        <main>
+            <h1><a href="https://github.com/tcutler96/ML-Football-Analysis">ML Football Analysis</a></h1>
+<p>This project builds a computer vision system that analyses football footage using deep learning and machine learning. It detects players, referees, and the ball, tracks movement across frames, measures distance and speed, and provides insights into team performance.</p>
+<p>The system combines YOLOv8 object detection, OpenCV tracking, and K-Means colour clustering to identify players, assign them to teams based on shirt colour, and applies optical flow and perspective transformation to convert pixel movement into real-world metrics. Annotated match footage is then saved with all insights overlaid.</p>
+<h2>Raw footage</h2>
+<p><img src="static/projects/ML%20Football%20Analysis/1.gif" alt="1" /></p>
+<h2>Detect and track players, referees, and the ball using YOLOv8</h2>
+<p><img src="static/projects/ML%20Football%20Analysis/2.gif" alt="2" /></p>
+<h2>Identify team colours and assign players to teams with K-Means clustering</h2>
+<p><img src="static/projects/ML%20Football%20Analysis/3.gif" alt="3" /></p>
+<h2>Detect ball possession for each team frame by frame</h2>
+<p><img src="static/projects/ML%20Football%20Analysis/4.gif" alt="4" /></p>
+<h2>Use perspective transformation to measure player speed and distance in metres</h2>
+<p><img src="static/projects/ML%20Football%20Analysis/5.gif" alt="5" /></p>
+
+        </main>
+    </div>
+
+    <div id="Finance Data Automation" class="tabcontent">
+        <main>
+            <h1><a href="https://github.com/tcutler96/Finance-Data-Automation">Finance Data Automation</a></h1>
+<p>Developed a collection of integrated Python scripts to automate personal finance management, covering income, expenses, and invoice processing through automated reporting. The system makes use of file and email automation (IMAP), PDF and CSV parsing, Excel manipulation, and data validation in order to streamline repetitive financial tracking tasks, reducing errors, and improving data transparency.</p>
+<h2>Process Invoices</h2>
+<p>Connects securely to an Outlook inbox via IMAP, retrieves emails from predefined senders, extracts attached invoices or reports (PDF/CSV), and saves them in structured folders by financial year and date range.</p>
+<h2>Process Income</h2>
+<p>Reads income transaction CSV files from multiple financial year directories, consolidates them into an Excel workbook, updates totals automatically, and prevents duplicate entries.</p>
+<h2>Process Expenses</h2>
+<p>Records and organises expenses within an Excel workbook, automatically sorting them by date and financial year, calculating totals, and maintaining backup copies of previous files.</p>
+
+        </main>
+    </div>
+
+    <div id="Step I Must" class="tabcontent">
+        <main>
+            <h1><a href="https://github.com/tcutler96/Step-I-Must">Step I Must</a></h1>
+<p>This game is a Python-based fan recreation of an excellent puzzle game called N Step Steve (found <a href="https://epicpikaguy.itch.io/n-step-steve-part-1">here</a> and <a href="https://epicpikaguy.itch.io/n-step-steve-part-2">here</a>). It was built entirely from scratch in Python for educational and personal use only.</p>
+<h2>About the Game</h2>
+<p><strong>Step I Must</strong> is a 2D Sokoban-style puzzle game where each move counts.<br />
+You control one (or more) slimes who can only take a limited number of steps.<br />
+Each level challenges you to plan your moves carefully to reach the goal.</p>
+<p><img src="static/projects/Step%20I%20Must/1.gif" alt="1" /></p>
+<h2>Features</h2>
+<ul>
+<li>Animated sprites and fragment shaders</li>
+<li>Custom music and sound effects</li>
+<li>Automatic saving for progress and settings</li>
+<li>Undo/ redo move system to encourage experimentation</li>
+</ul>
+<h3>Tile-based movement</h3>
+<p><img src="static/projects/Step%20I%20Must/2.gif" alt="2" /></p>
+<h3>Object interaction logic</h3>
+<p><img src="static/projects/Step%20I%20Must/3.gif" alt="3" /></p>
+<h3>180+ levels</h3>
+<p><img src="static/projects/Step%20I%20Must/4.gif" alt="4" /></p>
+<h3>Built in level editor</h3>
+<p><img src="static/projects/Step%20I%20Must/5.gif" alt="5" /></p>
+<h2>Built With</h2>
+<ul>
+<li>Python 3.13.5</li>
+<li>PyGame (for window, input, and audio control)</li>
+<li>OpenGL (GLSL shaders for rendering effects)</li>
+</ul>
+<h2>Running the Game</h2>
+<p>Clone the repository (data folder required) and then:</p>
+<ul>
+<li>Option 1 (recommended): Run 'Step I Must.exe'</li>
+<li>Option 2: Open and run 'main.py'</li>
+</ul>
+
+        </main>
+    </div>
+
+    <div id="Covid-19 Time Series" class="tabcontent">
+        <main>
+            <h1><a href="https://github.com/tcutler96/Covid-19-Time-Series">Covid-19 Time Series</a></h1>
+<p>We retrieve Covid-19 data including global confirmed, death and recovered cases (<a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>) and UK deaths by age and region (<a href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/weeklyprovisionalfiguresondeathsregisteredinenglandandwales">ONS</a>), clean it to our liking and then perform some analysis and visualisations.</p>
+<h2>US Confirmed Daily Cases</h2>
+<p>By plotting US confirmed daily cases on a semi logarithmic plot, we can see that there was a short period of exponential growth from about 2nd March to 22nd March, which is when stay-at-orders were beginning to be announced in the US. It seems that the lockdown procedures were successful in significantly reducing transmission numbers.</p>
+<p><img src="static/projects/Covid-19%20Time%20Series/US_confirmed_cases.png" alt="Global Analysis" /></p>
+<h2>Global Confirmed Daily Cases</h2>
+<p>By plotting the daily confirmed cases for each country/ province, overlayed on a world map, we get visualisation of how the pandemic spread across the globe. We can see that it starts in Wuhan, China and then isolated hotspots appears throughout the rest of the world which gradually grow.</p>
+<p><img src="static/projects/Covid-19%20Time%20Series/global_confirmed_cases.gif" alt="Global Animation" /></p>
+<h2>UK Deaths by Age</h2>
+<p>By plotting UK deaths over time separated into age groups, we can see a big spike around April, just after lockdown was initiated, that eventually falls off but then begins to rise again from October. Also, the majority of deaths are elderly people, with over 80% of deaths being persons over the age of 70, who most likely had previous underlying health conditions.</p>
+<p><img src="static/projects/Covid-19%20Time%20Series/uk_deaths_age.png" alt="UK Analysis" /></p>
+<h2>UK Deaths by Region</h2>
+<p>By plotting the map of the UK with colour coded regions, we can see how each region was effected each day. The worst time period was during April with many regions reporting hundreds of deaths each days and the countries capital of London reaching over 300. This rapidly falls off following the lockdown procedures.</p>
+<p><img src="static/projects/Covid-19%20Time%20Series/uk_deaths_region.gif" alt="UK Animation" /></p>
+
+        </main>
+    </div>
+
+    <div id="Image Paint" class="tabcontent">
+        <main>
+            <h1><a href="https://github.com/tcutler96/Image-Paint">Image Paint</a></h1>
+<p>We take an image in Python and reproduce such that it looks like it has been painted. This is achieved with two different approaches, one utilising the PIL Image library and the other by the manipulation of Numpy arrays. Contains many image options, including saving the output, and the ability to process entire folders of images in one go.</p>
+<h2>Examples</h2>
+<p><img src="static/projects/Image%20Paint/image_1_new_2.jpg" alt="Flower" /></p>
+<p><img src="static/projects/Image%20Paint/image_2_new_2.jpg" alt="Train" /></p>
+<p><img src="static/projects/Image%20Paint/image_3_new_2.jpg" alt="Trees" /></p>
+
+        </main>
+    </div>
+
+
+<script>
+document.getElementById("Welcome_tab").click();
+</script>
+
+<div>
+    <footer>
+        Built with Python and Flask. Deployed with Frozen-Flask and GitHub Pages.
+        <br>
+        Contact me at <a href="mailto:tcutler96@hotmail.com">tcutler96@hotmail.com</a>
+    </footer>
+</div>
 
 </body>
 

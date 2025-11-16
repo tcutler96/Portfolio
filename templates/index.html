@@ -6,59 +6,35 @@
 
 {% block body %}
 <div class="content">
-<header>
-  <h1>Tom Cutler Portfolio</h1>
-</header>
-
-<nav>
-  <a href="#test">Home</a> |
-  <a href="/">Project</a> |
-  <a href="/">Project</a> |
-  <a href="/">Project</a>
-</nav>
-
-<hr>
-
-<main>
-  <h2 id="test">Welcome to my Portfolio.</h2>
-    <p>You can learn more about how to build and deploy your new website by reading the  <a href="https://www.bridgetownrb.com/docs">Bridgetown documentation</a>.</p>
-    <p>You can choose a <a href="https://github.com/topics/bridgetown-theme">theme</a> or add some <a href="https://www.bridgetownrb.com/plugins/">plugins</a> to get started quickly.</p>
-    <p>Be sure to check out the <a href="https://bridgetown.cards">Bridgetown Cards</a> community site for helpful tips &amp; tricks.</p>
-    <p>If you run into any issues or have additional questions, please join us in our <a href="https://discord.gg/4E6hktQGz4">Discord chat</a> or in <a href="https://github.com/bridgetownrb/bridgetown/discussions">GitHub discussions</a>.</p>
-    <p><em>Have fun and <strong>good luck</strong>!</em></p>
-    <p><em>Have fun and <strong>good luck</strong>!</em></p>
-    <p><em>Have fun and <strong>good luck</strong>!</em></p>
-    <p><em>Have fun and <strong>good luck</strong>!</em></p>
-    <p><em>Have fun and <strong>good luck</strong>!</em></p>
-</main>
-
-<footer>
-  Built with Python and Flask. Deployed with Frozen-Flask and GitHub Pages.
-  <br>
-  Contact me at <a href="mailto:your-email@example.com">your-email@example.com</a>
-</footer>
+    <header>
+        <h1>Tom Cutler Portfolio</h1>
+    </header>
 </div>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+<!--    <button class="tablinks" onclick="changeTab(event, 'Home')" id="defaultOpen">Home</button>-->
+    {% for name in projects_data %}
+        <button class="tablinks" onclick="changeTab(event, '{{ name }}')" id="{{ name + '_tab' }}">{{ name }}</button>
+    {% endfor %}
 </div>
 
-<!-- Tab content -->
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
+{% for name, readme in projects_data.items() %}
+    <div id="{{ name }}" class="tabcontent">
+        <main>
+            {{ readme|safe }}
+        </main>
+    </div>
+{% endfor %}
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
+<script>
+document.getElementById("Welcome_tab").click();
+</script>
 
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+<div>
+    <footer>
+        Built with Python and Flask. Deployed with Frozen-Flask and GitHub Pages.
+        <br>
+        Contact me at <a href="mailto:tcutler96@hotmail.com">tcutler96@hotmail.com</a>
+    </footer>
 </div>
-
 {% endblock %}

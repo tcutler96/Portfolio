@@ -1,12 +1,14 @@
+
 :root {
     --primary_colour: rgb(30, 30, 30);
     --secondary_colour: rgb(225, 225, 225);
     --link_colour: rgb(188, 55, 84);
+    --transition_length: 1.0s;
 }
 
 body {
-    background: linear-gradient(90deg, #482173, #433e85, #38588c, #2d708e, #25858e, #1e9b8a, #2ab07f, #52c569, #86d549, #c2df23);
-    background-size: 2000% 2000%;
+    background: linear-gradient(90deg, #7cafd7, #7fa5d3, #849bce, #7282c8, #616dc0, #534cb9, #5340a9);
+    background-size: 1000% 1000%;
     animation: background_gradient 60s ease infinite;
     color: var(--primary_colour);
     font-family: sans-serif;
@@ -66,17 +68,17 @@ hr {
   }
 
 main {
-    margin: 2rem auto 2rem;
-    text-align: center;
-    max-width: 50%;
-    padding: 25px 25px 25px;
-    /* min-height: calc(100vh - 200px); */
-    background: var(--secondary_colour);
-    box-shadow: 2px 3px 3px var(--primary_colour);
-    border-radius: 10px;
-    @media (max-width: 500px) {
-        padding: 16px 16px 16px;
-    }
+/*    margin: 2rem auto 2rem;*/
+/*    text-align: center;*/
+/*    max-width: 50%;*/
+/*    padding: 25px 25px 25px;*/
+/*    min-height: calc(100vh - 200px);*/
+/*    background: var(--secondary_colour);*/
+/*    box-shadow: 2px 3px 2px var(--primary_colour);*/
+/*    border-radius: 10px;*/
+/*    @media (max-width: 500px) {*/
+/*        padding: 16px 16px 16px;*/
+/*    }*/
 }
 
 footer {
@@ -87,37 +89,70 @@ footer {
 
 /* Style the tab */
 .tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border: none;
+    gap: 1rem;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
+    color: var(--link_colour);
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: inherit;
+    float: center;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    padding: 16px 16px;
+    transition: var(--transition_length) / 2;
+    margin: 0 0 0.5rem;
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+    text-decoration: underline;
 }
 
-/* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+    text-decoration: none;
+    background-color: var(--secondary_colour);
+    box-shadow: 2px 2px 2px var(--primary_colour);
 }
 
-/* Style the tab content */
 .tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+    display: none;
+    max-width: 50%;
+    padding: 6px 12px;
+    border: none;
+    border-top: none;
+    margin: 2rem auto 2rem;
+    max-width: 50%;
+    padding: 25px 50px 25px;
+    background: var(--secondary_colour);
+    box-shadow: 2px 3px 2px var(--primary_colour);
+    border-radius: 10px;
+    animation: fadeEffect var(--transition_length);
 }
 
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 75%;
+/*    max-width: 75%;*/
+}
+
+embed {
+    display: block;
+    margin: auto;
+    width: 75%;
+    height: 1100px;
+}
