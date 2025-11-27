@@ -7,34 +7,57 @@
 {% block body %}
 <div class="content">
     <header>
-        <h1>Tom Cutler Portfolio</h1>
+        <h1 class="title">Tom Cutler Portfolio</h1>
     </header>
 </div>
 
-<div class="tab">
-<!--    <button class="tablinks" onclick="changeTab(event, 'Home')" id="defaultOpen">Home</button>-->
-    {% for name in projects_data %}
-        <button class="tablinks" onclick="changeTab(event, '{{ name }}')" id="{{ name + '_tab' }}">{{ name }}</button>
-    {% endfor %}
-</div>
-
-{% for name, readme in projects_data.items() %}
-    <div id="{{ name }}" class="tabcontent">
-        <main>
-            {{ readme|safe }}
-        </main>
+<section>
+    <div class="tab main-tab">
+        {% for main_name in site_data %}
+            <button class="tab-button main-tab-button"
+                    id="{{ main_name }}-button"
+                    onclick="changeMainTab('{{ main_name }}')">
+                {{ main_name }}
+            </button>
+        {% endfor %}
     </div>
-{% endfor %}
+
+    {% for main_name, sub_dict in site_data.items() %}
+        <div class="main-tab-content"
+             id="{{ main_name }}-content"
+             style="display:none">
+
+            <div class="tab sub-tab">
+                {% for sub_name in sub_dict %}
+                    <button class="tab-button sub-tab-button"
+                            id="{{ main_name }}-{{ sub_name }}-button"
+                            onclick="changeSubTab('{{ main_name }}', '{{ sub_name }}')">
+                        {{ sub_name }}
+                    </button>
+                {% endfor %}
+            </div>
+
+            {% for sub_name, content in sub_dict.items() %}
+                <div class="sub-tab-content"
+                     id="{{ main_name }}-{{ sub_name }}-content"
+                     style="display:none">
+                    <main>
+                        {{ content|safe }}
+                    </main>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</section>
 
 <script>
-document.getElementById("Welcome_tab").click();
+(function() {
+    const firstMain = document.querySelector('.main-tab-button');
+    if (firstMain) {
+        const mainName = firstMain.textContent.trim();
+        changeMainTab(mainName);
+    }
+})();
 </script>
 
-<div>
-    <footer>
-        Built with Python and Flask. Deployed with Frozen-Flask and GitHub Pages.
-        <br>
-        Contact me at <a href="mailto:tcutler96@hotmail.com">tcutler96@hotmail.com</a>
-    </footer>
-</div>
 {% endblock %}

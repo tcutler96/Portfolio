@@ -17,84 +17,320 @@
     
 <div class="content">
     <header>
-        <h1>Tom Cutler Portfolio</h1>
+        <h1 class="title">Tom Cutler Portfolio</h1>
     </header>
 </div>
 
-<div class="tab">
-<!--    <button class="tablinks" onclick="changeTab(event, 'Home')" id="defaultOpen">Home</button>-->
-    
-        <button class="tablinks" onclick="changeTab(event, 'Welcome')" id="Welcome_tab">Welcome</button>
-    
-        <button class="tablinks" onclick="changeTab(event, 'CV')" id="CV_tab">CV</button>
-    
-        <button class="tablinks" onclick="changeTab(event, 'ML Football Analysis')" id="ML Football Analysis_tab">ML Football Analysis</button>
-    
-        <button class="tablinks" onclick="changeTab(event, 'Finance Data Automation')" id="Finance Data Automation_tab">Finance Data Automation</button>
-    
-        <button class="tablinks" onclick="changeTab(event, 'Step I Must')" id="Step I Must_tab">Step I Must</button>
-    
-        <button class="tablinks" onclick="changeTab(event, 'Covid-19 Time Series')" id="Covid-19 Time Series_tab">Covid-19 Time Series</button>
-    
-        <button class="tablinks" onclick="changeTab(event, 'Image Paint')" id="Image Paint_tab">Image Paint</button>
-    
-</div>
-
-
-    <div id="Welcome" class="tabcontent">
-        <main>
-            <h1><a href="https://github.com/tcutler96/Portfolio">Welcome to my portfolio</a></h1>
-<p>Here you will find cv as well as a number of projects covering many topics/ domains, use the tabs at the top to switch between them.</p>
-<p>Each title (including this one) links to the GitHub page where the code can be inspected.</p>
-
-        </main>
+<section>
+    <div class="tab main-tab">
+        
+            <button class="tab-button main-tab-button"
+                    id="Home-button"
+                    onclick="changeMainTab('Home')">
+                Home
+            </button>
+        
+            <button class="tab-button main-tab-button"
+                    id="Data Analysis-button"
+                    onclick="changeMainTab('Data Analysis')">
+                Data Analysis
+            </button>
+        
+            <button class="tab-button main-tab-button"
+                    id="Software Automation-button"
+                    onclick="changeMainTab('Software Automation')">
+                Software Automation
+            </button>
+        
+            <button class="tab-button main-tab-button"
+                    id="Game Development-button"
+                    onclick="changeMainTab('Game Development')">
+                Game Development
+            </button>
+        
+            <button class="tab-button main-tab-button"
+                    id="Web Apps-button"
+                    onclick="changeMainTab('Web Apps')">
+                Web Apps
+            </button>
+        
+            <button class="tab-button main-tab-button"
+                    id="Image Maniplulation-button"
+                    onclick="changeMainTab('Image Maniplulation')">
+                Image Maniplulation
+            </button>
+        
     </div>
 
-    <div id="CV" class="tabcontent">
-        <main>
-            <h1><a href="static/projects/CV/CV.pdf" CV>CV</a></h1>
+    
+        <div class="main-tab-content"
+             id="Home-content"
+             style="display:none">
+
+            <div class="tab sub-tab">
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Home-Welcome-button"
+                            onclick="changeSubTab('Home', 'Welcome')">
+                        Welcome
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Home-CV-button"
+                            onclick="changeSubTab('Home', 'CV')">
+                        CV
+                    </button>
+                
+            </div>
+
+            
+                <div class="sub-tab-content"
+                     id="Home-Welcome-content"
+                     style="display:none">
+                    <main>
+                        <h1>Welcome</h1>
+<p>Hi. My name is Tom Cutler, a mathematics graduate with strong programming and problem-solving skills.</p>
+<p>This site showcases some of my work across different areas of programming. You can use the tabs at the top to move between topics and the sub tabs to browse each project. Also, the title of every project contains a link to its GitHub repo if you wish to inspect the code.</p>
+<p>I hope you enjoy looking through the projects. If you want to get in touch, you can contact me at <a href="mailto:tcutler96@hotmail.com">tcutler96@hotmail.com</a>.</p>
+
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Home-CV-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="static/projects/CV/CV.pdf" CV>CV</a></h1>
 
 <p><embed src="static/projects/CV/CV.pdf"></p>
 
-        </main>
-    </div>
+                    </main>
+                </div>
+            
+        </div>
+    
+        <div class="main-tab-content"
+             id="Data Analysis-content"
+             style="display:none">
 
-    <div id="ML Football Analysis" class="tabcontent">
-        <main>
-            <h1><a href="https://github.com/tcutler96/ML-Football-Analysis">ML Football Analysis</a></h1>
+            <div class="tab sub-tab">
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Data Analysis-ML Football Analysis-button"
+                            onclick="changeSubTab('Data Analysis', 'ML Football Analysis')">
+                        ML Football Analysis
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Data Analysis-Covid-19 Time Series-button"
+                            onclick="changeSubTab('Data Analysis', 'Covid-19 Time Series')">
+                        Covid-19 Time Series
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Data Analysis-Power BI Analysis-button"
+                            onclick="changeSubTab('Data Analysis', 'Power BI Analysis')">
+                        Power BI Analysis
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Data Analysis-Excel Analysis-button"
+                            onclick="changeSubTab('Data Analysis', 'Excel Analysis')">
+                        Excel Analysis
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Data Analysis-Tableau Analysis-button"
+                            onclick="changeSubTab('Data Analysis', 'Tableau Analysis')">
+                        Tableau Analysis
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Data Analysis-SQL Analysis-button"
+                            onclick="changeSubTab('Data Analysis', 'SQL Analysis')">
+                        SQL Analysis
+                    </button>
+                
+            </div>
+
+            
+                <div class="sub-tab-content"
+                     id="Data Analysis-ML Football Analysis-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/ML-Football-Analysis">ML Football Analysis</a></h1>
 <p>This project builds a computer vision system that analyses football footage using deep learning and machine learning. It detects players, referees, and the ball, tracks movement across frames, measures distance and speed, and provides insights into team performance.</p>
 <p>The system combines YOLOv8 object detection, OpenCV tracking, and K-Means colour clustering to identify players, assign them to teams based on shirt colour, and applies optical flow and perspective transformation to convert pixel movement into real-world metrics. Annotated match footage is then saved with all insights overlaid.</p>
-<h2>Raw footage</h2>
+<h2>Workflow</h2>
+<ul>
+<li>Raw footage</li>
+</ul>
 <p><img src="static/projects/ML%20Football%20Analysis/1.gif" alt="1" /></p>
-<h2>Detect and track players, referees, and the ball using YOLOv8</h2>
+<ul>
+<li>Detect and track players, referees, and the ball using YOLOv8</li>
+</ul>
 <p><img src="static/projects/ML%20Football%20Analysis/2.gif" alt="2" /></p>
-<h2>Identify team colours and assign players to teams with K-Means clustering</h2>
+<ul>
+<li>Identify team colours and assign players to teams with K-Means clustering</li>
+</ul>
 <p><img src="static/projects/ML%20Football%20Analysis/3.gif" alt="3" /></p>
-<h2>Detect ball possession for each team frame by frame</h2>
+<ul>
+<li>Detect ball possession for each team frame by frame</li>
+</ul>
 <p><img src="static/projects/ML%20Football%20Analysis/4.gif" alt="4" /></p>
-<h2>Use perspective transformation to measure player speed and distance in metres</h2>
+<ul>
+<li>Use perspective transformation to measure player speed and distance in metres (final output)</li>
+</ul>
 <p><img src="static/projects/ML%20Football%20Analysis/5.gif" alt="5" /></p>
 
-        </main>
-    </div>
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Data Analysis-Covid-19 Time Series-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Covid-19-Time-Series">Covid-19 Time Series</a></h1>
+<p>This project looks at how Covid-19 cases changed over time. It pulls data from two main sources. The first is the global confirmed, death, and recovered figures from the <a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a> dataset. The second is the UK death records by age and region from the <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/weeklyprovisionalfiguresondeathsregisteredinenglandandwales">ONS</a>. We clean the data so that the dates, locations and case numbers are consistent, then group them into useful time series. Once the data is in a good state, we produced a set of charts that show how the virus spread, how case numbers changed, and how different areas and age groups were affected.</p>
+<h2>US Confirmed Daily Cases</h2>
+<p>By plotting US confirmed daily cases on a semi logarithmic plot, we can see that there was a short period of exponential growth from about 2nd March to 22nd March, which is when stay-at-orders were beginning to be announced in the US. It seems that the lockdown procedures were successful in significantly reducing transmission numbers.</p>
+<p><img src="static/projects/Covid-19%20Time%20Series/US_confirmed_cases.png" alt="Global Analysis" /></p>
+<h2>Global Confirmed Daily Cases</h2>
+<p>By plotting the daily confirmed cases for each country/ province, overlayed on a world map, we get visualisation of how the pandemic spread across the globe. We can see that it starts in Wuhan, China and then isolated hotspots appears throughout the rest of the world which gradually grow.</p>
+<p><img src="static/projects/Covid-19%20Time%20Series/global_confirmed_cases.gif" alt="Global Animation" /></p>
+<h2>UK Deaths by Age</h2>
+<p>By plotting UK deaths over time separated into age groups, we can see a big spike around April, just after lockdown was initiated, that eventually falls off but then begins to rise again from October. Also, the majority of deaths are elderly people, with over 80% of deaths being persons over the age of 70, who most likely had previous underlying health conditions.</p>
+<p><img src="static/projects/Covid-19%20Time%20Series/uk_deaths_age.png" alt="UK Analysis" /></p>
+<h2>UK Deaths by Region</h2>
+<p>By plotting the map of the UK with colour coded regions, we can see how each region was effected each day. The worst time period was during April with many regions reporting hundreds of deaths each days and the countries capital of London reaching over 300. This rapidly falls off following the lockdown procedures.</p>
+<p><img src="static/projects/Covid-19%20Time%20Series/uk_deaths_region.gif" alt="UK Animation" /></p>
 
-    <div id="Finance Data Automation" class="tabcontent">
-        <main>
-            <h1><a href="https://github.com/tcutler96/Finance-Data-Automation">Finance Data Automation</a></h1>
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Data Analysis-Power BI Analysis-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Power-BI-Analysis">Power BI Analysis</a></h1>
+<p>This project involved analysing and visualising survey data provided by data professionals, covering aspects such as location, salary, favourite programming language, and overall job satisfaction. The data was cleaned and transformed using Power Query, allowing for the handling of missing values, column formatting, and combining multiple data sources. Relationships and joins were established to connect tables effectively, and DAX formulas were applied to calculate key metrics such as average salary by region, language popularity, and satisfaction trends.</p>
+<h2>Dashboard</h2>
+<p>The project features an interactive Power BI dashboard with multiple visualisations, including bar charts, maps, and scatter plots. Drill-downs and grouping enable detailed exploration, while conditional formatting highlights trends and anomalies. Overall, this project demonstrates how structured data modelling, combined with interactive visual analytics, can uncover insights about the data profession and support informed decision-making.</p>
+<p><img src="static/projects/Power%20BI%20Analysis/demo.gif" alt="Demo" /></p>
+
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Data Analysis-Excel Analysis-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Excel-Analysis">Excel Analysis</a></h1>
+<p>This project uses bike sales data to build a clear Excel dashboard. The work began with data cleaning to fix missing values, reshape columns, and keep the file consistent. Pivot tables were then used to explore trends such as sales by region and customer groups, while formulas and lookups helped keep the data accurate and easy to update.</p>
+<h2>Dashboard</h2>
+<p>The dashboard includes charts, graphs, and conditional formatting to highlight important values and show patterns at a glance. The aim was to create a simple tool that anyone can use to explore the dataset and understand the main trends with no extra setup.</p>
+<p><img src="static/projects/Excel%20Analysis/demo.gif" alt="Demo" /></p>
+
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Data Analysis-Tableau Analysis-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Tableau-Analysis">Tableau Analysis</a></h1>
+<p>This project explores an Airbnb dataset using Tableau. The data includes location, number of bedrooms, price, yearly revenue, and other useful details. The work involved cleaning the data, creating calculated fields, and building a set of visuals that make the relationships in the dataset easy to understand. The aim was to produce a clear and interactive way to study how different factors affect listing performance.</p>
+<h2>Dashboard</h2>
+<p>The dashboard brings the analysis together with filters, charts, and summary views. You can compare areas, check how price changes with bedrooms, and spot listings with strong yearly revenue. Everything updates as you interact with the controls, making it simple to explore the dataset from different angles.</p>
+<p><img src="static/projects/Tableau%20Analysis/demo.gif" alt="Demo" /></p>
+
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Data Analysis-SQL Analysis-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/SQL-Analysis">SQL Analysis</a></h1>
+<p>This project cleans and analyses a global company layoffs dataset using SQL. The aim was to fix issues in the raw data so the analysis would be reliable. The cleaning work included removing duplicates, standardising industry names, fixing formatting problems, updating country and date fields, and filling gaps using joins. Once the data was stable, a set of queries was used to explore layoffs from 2020 to 2023 and highlight the main trends.</p>
+<p>The analysis looks at how layoffs changed by company, industry, and country over time. It includes ranking companies by total layoffs, checking post IPO trends, and calculating rolling monthly totals. CTEs were used to keep the logic clear and handle multi step queries. The aim was to give a simple view of how global layoffs changed across the period.</p>
+
+                    </main>
+                </div>
+            
+        </div>
+    
+        <div class="main-tab-content"
+             id="Software Automation-content"
+             style="display:none">
+
+            <div class="tab sub-tab">
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Software Automation-Finance Data Automation-button"
+                            onclick="changeSubTab('Software Automation', 'Finance Data Automation')">
+                        Finance Data Automation
+                    </button>
+                
+            </div>
+
+            
+                <div class="sub-tab-content"
+                     id="Software Automation-Finance Data Automation-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Finance-Data-Automation">Finance Data Automation</a></h1>
 <p>Developed a collection of integrated Python scripts to automate personal finance management, covering income, expenses, and invoice processing through automated reporting. The system makes use of file and email automation (IMAP), PDF and CSV parsing, Excel manipulation, and data validation in order to streamline repetitive financial tracking tasks, reducing errors, and improving data transparency.</p>
-<h2>Process Invoices</h2>
-<p>Connects securely to an Outlook inbox via IMAP, retrieves emails from predefined senders, extracts attached invoices or reports (PDF/CSV), and saves them in structured folders by financial year and date range.</p>
-<h2>Process Income</h2>
-<p>Reads income transaction CSV files from multiple financial year directories, consolidates them into an Excel workbook, updates totals automatically, and prevents duplicate entries.</p>
-<h2>Process Expenses</h2>
-<p>Records and organises expenses within an Excel workbook, automatically sorting them by date and financial year, calculating totals, and maintaining backup copies of previous files.</p>
+<h2>Scripts</h2>
+<ul>
+<li>Process invoices - Connects securely to an Outlook inbox via IMAP, retrieves emails from predefined senders, extracts attached invoices or reports (PDF/CSV), and saves them in structured folders by financial year and date range.</li>
+<li>Process Income - Reads income transaction CSV files from multiple financial year directories, consolidates them into an Excel workbook, updates totals automatically, and prevents duplicate entries.</li>
+<li>Process Expenses - Records and organises expenses within an Excel workbook, automatically sorting them by date and financial year, calculating totals, and maintaining backup copies of previous files.</li>
+</ul>
 
-        </main>
-    </div>
+                    </main>
+                </div>
+            
+        </div>
+    
+        <div class="main-tab-content"
+             id="Game Development-content"
+             style="display:none">
 
-    <div id="Step I Must" class="tabcontent">
-        <main>
-            <h1><a href="https://github.com/tcutler96/Step-I-Must">Step I Must</a></h1>
+            <div class="tab sub-tab">
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Game Development-Step I Must-button"
+                            onclick="changeSubTab('Game Development', 'Step I Must')">
+                        Step I Must
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Game Development-Maze Generator and Solver-button"
+                            onclick="changeSubTab('Game Development', 'Maze Generator and Solver')">
+                        Maze Generator and Solver
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Game Development-Snake-button"
+                            onclick="changeSubTab('Game Development', 'Snake')">
+                        Snake
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Game Development-Particle Test Chamber-button"
+                            onclick="changeSubTab('Game Development', 'Particle Test Chamber')">
+                        Particle Test Chamber
+                    </button>
+                
+            </div>
+
+            
+                <div class="sub-tab-content"
+                     id="Game Development-Step I Must-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Step-I-Must">Step I Must</a></h1>
 <p>This game is a Python-based fan recreation of an excellent puzzle game called N Step Steve (found <a href="https://epicpikaguy.itch.io/n-step-steve-part-1">here</a> and <a href="https://epicpikaguy.itch.io/n-step-steve-part-2">here</a>). It was built entirely from scratch in Python for educational and personal use only.</p>
 <h2>About the Game</h2>
 <p><strong>Step I Must</strong> is a 2D Sokoban-style puzzle game where each move counts.<br />
@@ -129,53 +365,238 @@ Each level challenges you to plan your moves carefully to reach the goal.</p>
 <li>Option 2: Open and run 'main.py'</li>
 </ul>
 
-        </main>
-    </div>
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Game Development-Maze Generator and Solver-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Maze-Generator-and-Solver">Maze Generator and Solver</a></h1>
+<p>This project explores various techniques to both generate and solve mazes by implementing them in Python. This is all visualised with a full real time display in PyGame. When you start the program with the selected options, a maze is created cell by cell and then the solver takes over and searches for a path through that maze. The maze itself is stored as a grid in memory and displayed using coloured cells, each colour representing a different state.</p>
+<h2>Maze Generation</h2>
+<p>The generator builds the maze by walking through the grid one cell at a time until it has filled in the entire grid. It uses a queue to store cells it still needs to visit. Two settings control how this works.</p>
+<p>Queue method controls the order news cells are taken from the queue:</p>
+<ul>
+<li>LIFO (last in first out) works like a stack and creates long corridors.</li>
+<li>FIFO (first in first out) works like a normal queue and spreads out more evenly.</li>
+</ul>
+<p>Choose method controls how the generator picks the next unvisited neighbour:</p>
+<ul>
+<li>Random picks a neighbour at random, leading to a natural and twisty maze.</li>
+<li>First always picks the first neighbour in the list.</li>
+<li>Last always picks the last neighbour in the list.</li>
+</ul>
+<p>Using LIFO with random gives the normal recursive backtracker.</p>
+<h2>Maze Solving</h2>
+<p>The solver tries to reach the end cell (bottom right) from the start cell (top left). Every time it tries a new move, it marks the cell as queued. When the solver pops a path from the queue, it marks the cell as searched.</p>
+<p>Algorithm controls which path the solver will follow:</p>
+<ul>
+<li>bfs (breadth first search) checks paths in rings spreading out from the start. It always finds the shortest path.</li>
+<li>dfs (depth first search) dives down one path until it cannot continue, then backtracks. It does not guarantee the shortest path.</li>
+</ul>
+<p>The solver ends when it reaches the end cell. It then walks back through the path and marks it so you can see the full path through the maze.</p>
+<p><img src="static/projects/Maze%20Generator%20and%20Solver/demo.gif" alt="Demo" /></p>
 
-    <div id="Covid-19 Time Series" class="tabcontent">
-        <main>
-            <h1><a href="https://github.com/tcutler96/Covid-19-Time-Series">Covid-19 Time Series</a></h1>
-<p>We retrieve Covid-19 data including global confirmed, death and recovered cases (<a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>) and UK deaths by age and region (<a href="https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/weeklyprovisionalfiguresondeathsregisteredinenglandandwales">ONS</a>), clean it to our liking and then perform some analysis and visualisations.</p>
-<h2>US Confirmed Daily Cases</h2>
-<p>By plotting US confirmed daily cases on a semi logarithmic plot, we can see that there was a short period of exponential growth from about 2nd March to 22nd March, which is when stay-at-orders were beginning to be announced in the US. It seems that the lockdown procedures were successful in significantly reducing transmission numbers.</p>
-<p><img src="static/projects/Covid-19%20Time%20Series/US_confirmed_cases.png" alt="Global Analysis" /></p>
-<h2>Global Confirmed Daily Cases</h2>
-<p>By plotting the daily confirmed cases for each country/ province, overlayed on a world map, we get visualisation of how the pandemic spread across the globe. We can see that it starts in Wuhan, China and then isolated hotspots appears throughout the rest of the world which gradually grow.</p>
-<p><img src="static/projects/Covid-19%20Time%20Series/global_confirmed_cases.gif" alt="Global Animation" /></p>
-<h2>UK Deaths by Age</h2>
-<p>By plotting UK deaths over time separated into age groups, we can see a big spike around April, just after lockdown was initiated, that eventually falls off but then begins to rise again from October. Also, the majority of deaths are elderly people, with over 80% of deaths being persons over the age of 70, who most likely had previous underlying health conditions.</p>
-<p><img src="static/projects/Covid-19%20Time%20Series/uk_deaths_age.png" alt="UK Analysis" /></p>
-<h2>UK Deaths by Region</h2>
-<p>By plotting the map of the UK with colour coded regions, we can see how each region was effected each day. The worst time period was during April with many regions reporting hundreds of deaths each days and the countries capital of London reaching over 300. This rapidly falls off following the lockdown procedures.</p>
-<p><img src="static/projects/Covid-19%20Time%20Series/uk_deaths_region.gif" alt="UK Animation" /></p>
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Game Development-Snake-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Snake">Snake</a></h1>
+<p>This is a recreation of the classic snake game made with Python and PyGame. The goal is to eat food, grow the snake, and reach a score of 25.</p>
+<p>The game features a full menu with a list of options relating to gameplay and visuals. You can change things like the look of the snake and its food, how many times the snake can wrap around the screen, the amount of particle effects, and also audio volume.</p>
+<p><img src="static/projects/Snake/demo.gif" alt="Demo" /></p>
 
-        </main>
-    </div>
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Game Development-Particle Test Chamber-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Particle-Test-Chamber">Particle Test Chamber</a></h1>
+<p>An interactive environment for testing particle behaviour in Python with PyGame. You can place and remove tiles, run simulations, and tweak many settings through a custom options menu.</p>
+<h2>Features</h2>
+<ul>
+<li>Interactive chamber. Click to add or remove tiles which lets you shape the space the particles move through.</li>
+<li>Particle simulation. Particles behaviour is controlled directly by the settings and their movement responds to the layout you build.</li>
+<li>Custom options menu. You can alter almost every part of the simulation, including particle count, gravity strength, and tile colour.</li>
+<li>Real time updates. Changes apply at once so you can experiment and see how each setting effects the simulation.</li>
+</ul>
+<p><img src="static/projects/Particle%20Test%20Chamber/demo.gif" alt="Demo" /></p>
 
-    <div id="Image Paint" class="tabcontent">
-        <main>
-            <h1><a href="https://github.com/tcutler96/Image-Paint">Image Paint</a></h1>
-<p>We take an image in Python and reproduce such that it looks like it has been painted. This is achieved with two different approaches, one utilising the PIL Image library and the other by the manipulation of Numpy arrays. Contains many image options, including saving the output, and the ability to process entire folders of images in one go.</p>
+                    </main>
+                </div>
+            
+        </div>
+    
+        <div class="main-tab-content"
+             id="Web Apps-content"
+             style="display:none">
+
+            <div class="tab sub-tab">
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Web Apps-Portfolio-button"
+                            onclick="changeSubTab('Web Apps', 'Portfolio')">
+                        Portfolio
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Web Apps-Task Manager-button"
+                            onclick="changeSubTab('Web Apps', 'Task Manager')">
+                        Task Manager
+                    </button>
+                
+            </div>
+
+            
+                <div class="sub-tab-content"
+                     id="Web Apps-Portfolio-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Portfolio">Portfolio</a></h1>
+<p>This is a portfolio site built to show my skills, experience, and the work I've done across different areas of programming. The site includes a full copy of my CV as well as a set of personal projects covering a variety of topics, including data analysis, software automation, game development, and image manipulation. Each project has its own page with a full description and a link to its GitHub repository where you can view the code source.</p>
+<h2>Tech Used</h2>
+<ul>
+<li>Python for the backend structure</li>
+<li>Flask to build and organise the web app</li>
+<li>HTML, CSS, and JavaScript for the frontend</li>
+<li>Flask Frozen to generate a static version of the site</li>
+<li>GitHub Pages for hosting and deployment</li>
+</ul>
+<p><img src="static/projects/Portfolio/demo.gif" alt="Demo" /></p>
+
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Web Apps-Task Manager-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Task-Manager">Task Manager</a></h1>
+<p>A Flask web app for creating and managing tasks. It lets you add new tasks, rename them, and delete them. All task information is stored in a database, so persists between sessions. This is a basic CRUD app but easy to extend. You could add user accounts, deadlines, or tags if you wanted to expand it.</p>
+<h2>Tech used</h2>
+<ul>
+<li>Python</li>
+<li>Flask</li>
+<li>SQLite</li>
+<li>HTML and CSS</li>
+</ul>
+<p><img src="static/projects/Task%20Manager/demo.gif" alt="Demo" /></p>
+
+                    </main>
+                </div>
+            
+        </div>
+    
+        <div class="main-tab-content"
+             id="Image Maniplulation-content"
+             style="display:none">
+
+            <div class="tab sub-tab">
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Image Maniplulation-Brush Paintify-button"
+                            onclick="changeSubTab('Image Maniplulation', 'Brush Paintify')">
+                        Brush Paintify
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Image Maniplulation-Seam Carving-button"
+                            onclick="changeSubTab('Image Maniplulation', 'Seam Carving')">
+                        Seam Carving
+                    </button>
+                
+                    <button class="tab-button sub-tab-button"
+                            id="Image Maniplulation-Kernels and Convolutions-button"
+                            onclick="changeSubTab('Image Maniplulation', 'Kernels and Convolutions')">
+                        Kernels and Convolutions
+                    </button>
+                
+            </div>
+
+            
+                <div class="sub-tab-content"
+                     id="Image Maniplulation-Brush Paintify-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Brush-Paintify">Brush Paintify</a></h1>
+<p>This project recreates an image in the style of a brush painting. It achieves this by sampling points from the original image and placing coloured brush strokes on a blank canvas. It has two implementations. Both are in Python and follow the same ideas. One uses the PIL Image library while the other utilizes Numpy arrays.</p>
+<h2>How It Works</h2>
+<p>The code samples points across the image at set intervals. A big interval means fewer sample points, so the painting looks rougher and more artistic. A small interval means more sample points, so the result keeps more detail and looks closer to the original image. At each point it reads the colour of the pixel. It then takes a brush stroke image, recolours it to match the pixel it is copying and pastes it on a blank canvas. This is repeated as many times as needed to a build a painted version of the original image.</p>
+<p>The PIL version handles strokes with simple image operations like resizing, recolouring, rotating, and pasting. It is easy to follow and good for learning. The Numpy version converts all images to arrays and uses array slicing and custom mixing of colours to blend brush strokes at the pixel level. It is faster and gives more control. Both versions follow the above process and support the same options.</p>
+<h2>Features</h2>
+<ul>
+<li>Two full implementations</li>
+<li>Random sample order</li>
+<li>Random brush rotation</li>
+<li>Optional border</li>
+<li>Image comparison</li>
+<li>Added watermark</li>
+<li>Progress tracking</li>
+<li>Bulk processing</li>
+</ul>
 <h2>Examples</h2>
-<p><img src="static/projects/Image%20Paint/image_1_new_2.jpg" alt="Flower" /></p>
-<p><img src="static/projects/Image%20Paint/image_2_new_2.jpg" alt="Train" /></p>
-<p><img src="static/projects/Image%20Paint/image_3_new_2.jpg" alt="Trees" /></p>
+<p><img src="static/projects/Brush%20Paintify/puppies.jpg" alt="Puppies" /></p>
+<p><img src="static/projects/Brush%20Paintify/flower.jpg" alt="Flower" /></p>
+<p><img src="static/projects/Brush%20Paintify/train.jpg" alt="Train" /></p>
+<p><img src="static/projects/Brush%20Paintify/trees.jpg" alt="Trees" /></p>
+<p><img src="static/projects/Brush%20Paintify/coast.jpg" alt="Coast" /></p>
 
-        </main>
-    </div>
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Image Maniplulation-Seam Carving-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Seam-Carving">Seam Carving</a></h1>
+<p>This project shows how to shrink an image while keeping important parts intact by implementing a method called seam carving. It works by finding a path of pixels with the lowest visual importance then removing that path. Repeating this many times reduces the width of the image without distorting it or losing important details.</p>
+<h2>Method</h2>
+<p>The code uses Sobel filters to detect edges. It converts the image to grey scale then computes the gradient in the x and y directions. The gradient magnitude becomes the energy map. High energy means strong edges and low energy means weak edges. A table of minimum energy is built from bottom to top. For each pixel the code looks at the three pixels below it and chooses the best option. This gives a full map of the cheapest path from any point at the top to the bottom. Once the minimum energy table is built, the code walks from the top row to the bottom row following the lowest cost directions. This seam is then removed from both the image and the energy map, reducing the width by one pixel. This process is repeated as many times as needed.</p>
+<h2>Minimum Energy Path Visualiser</h2>
+<p><img src="static/projects/Seam%20Carving/street_min_energy.gif" alt="Street" /></p>
+<h2>Example Shrinking</h2>
+<p><img src="static/projects/Seam%20Carving/clocks_seam_carving.png" alt="Clocks" /></p>
 
+                    </main>
+                </div>
+            
+                <div class="sub-tab-content"
+                     id="Image Maniplulation-Kernels and Convolutions-content"
+                     style="display:none">
+                    <main>
+                        <h1><a href="https://github.com/tcutler96/Kernels-and-Convolutions">Kernels and Convolutions</a></h1>
+<p>This project shows how to process images using kernels and convolutions. In image processing, a kernel or convolution matrix is a small grid of numbers that changes a pixel based on its nearby pixels. The output pixel becomes a simple function of its neighbours. By sliding the kernel over the image, applying convolutions along the way, it is possible to blur, sharpen, detect edges, and more.</p>
+<p>The code in this project applies several common kernels and shows how each one changes the image. It includes functions for filtering, edge detection, colour mapping, and full canny edge detection. It also includes helper functions to plot results with Matplotlib. Additionally, these processes are carried out from first principles using only Python and NumPy and does not rely on any image processing libraries so you can see how each step works.</p>
+<h2>Basic Manipulations</h2>
+<p><img src="static/projects/Kernels%20and%20Convolutions/train_basic.png" alt="train_basic" /></p>
+<h2>Coloured Edges</h2>
+<p><img src="static/projects/Kernels%20and%20Convolutions/night_sky_coloured.png" alt="night_sky_coloured" /></p>
+<h2>Canny Process</h2>
+<p><img src="static/projects/Kernels%20and%20Convolutions/flower_canny.png" alt="flower_canny" /></p>
+
+                    </main>
+                </div>
+            
+        </div>
+    
+</section>
 
 <script>
-document.getElementById("Welcome_tab").click();
+(function() {
+    const firstMain = document.querySelector('.main-tab-button');
+    if (firstMain) {
+        const mainName = firstMain.textContent.trim();
+        changeMainTab(mainName);
+    }
+})();
 </script>
 
-<div>
-    <footer>
-        Built with Python and Flask. Deployed with Frozen-Flask and GitHub Pages.
-        <br>
-        Contact me at <a href="mailto:tcutler96@hotmail.com">tcutler96@hotmail.com</a>
-    </footer>
-</div>
 
 </body>
 

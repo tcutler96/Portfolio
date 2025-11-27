@@ -1,20 +1,41 @@
 
-function changeTab(event, tabName) {
-  var i, tabContent, tabLinks;
 
-  // Get all elements with class="tabcontent" and hide them
-  tabContent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabContent.length; i++) {
-    tabContent[i].style.display = "none";
-  }
+function changeMainTab(mainName) {
+    document.querySelectorAll('.main-tab-content').forEach(div => {
+        div.style.display = 'none';
+    });
 
-  // Get all elements with class="tablinks" and remove the class "active"
-  tabLinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tabLinks.length; i++) {
-    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-  }
+    const mainContent = document.getElementById(mainName + '-content');
+    if (mainContent) mainContent.style.display = 'block';
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
-  event.currentTarget.className += " active";
+    document.querySelectorAll('.main-tab-button').forEach(button => {
+        button.classList.remove('active');
+    });
+
+    const mainButton = document.getElementById(mainName + '-button');
+    if (mainButton) mainButton.classList.add('active');
+
+    const firstSubButton = mainContent.querySelector('.sub-tab-button');
+    if (firstSubButton) {
+        const subName = firstSubButton.textContent.trim();
+        changeSubTab(mainName, subName);
+    }
+}
+
+
+function changeSubTab(mainName, subName) {
+    const mainContent = document.getElementById(mainName + '-content');
+    mainContent.querySelectorAll('.sub-tab-content').forEach(div => {
+        div.style.display = 'none';
+    });
+
+    const subContent = document.getElementById(mainName + '-' + subName + '-content');
+    if (subContent) subContent.style.display = 'block';
+
+    mainContent.querySelectorAll('.sub-tab-button').forEach(subButton => {
+        subButton.classList.remove('active');
+    });
+
+    const subButton = document.getElementById(mainName + '-' + subName + '-button');
+    if (subButton) subButton.classList.add('active');
 }
