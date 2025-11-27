@@ -1,5 +1,5 @@
 # [Portfolio](https://github.com/tcutler96/Portfolio)
-This is a portfolio site built to show my skills, experience, and the work I've done across different areas of programming. The site includes a full copy of my CV as well as a set of personal projects covering a variety of topics, including data analysis, software automation, game development, and image manipulation. Each project has its own page with a full description and a link to its GitHub repository where you can view the code source.
+This is a portfolio site built to show my skills, experience, and the work I've done across different areas of programming. The site includes a full copy of my CV as well as a set of personal projects covering a variety of topics, including data analysis, software automation, game development, web apps, and image manipulation. Each project has its own page with a full description and a link to its GitHub repository where you can view the code source.
 
 ## Tech Used
 - Python for the backend structure
