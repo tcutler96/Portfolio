@@ -1,0 +1,4 @@
+# [SQL Analysis](https://github.com/tcutler96/SQL-Analysis)
+This project cleans and analyses a global company layoffs dataset using SQL. The aim was to fix issues in the raw data so the analysis would be reliable. The cleaning work included removing duplicates, standardising industry names, fixing formatting problems, updating country and date fields, and filling gaps using joins. Once the data was stable, a set of queries was used to explore layoffs from 2020 to 2023 and highlight the main trends.
+
+The analysis looks at how layoffs changed by company, industry, and country over time. It includes ranking companies by total layoffs, checking post IPO trends, and calculating rolling monthly totals. CTEs were used to keep the logic clear and handle multi step queries. The aim was to give a simple view of how global layoffs changed across the period.

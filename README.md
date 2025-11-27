@@ -7,3 +7,5 @@ This is a simple portfolio site ([https://tcutler96.github.io/Portfolio/](https:
 - HTML, CSS, and JavaScript for the frontend
 - Flask Frozen to generate a static version of the site
 - GitHub Pages for hosting and deployment
+
+![Demo](demo.gif)

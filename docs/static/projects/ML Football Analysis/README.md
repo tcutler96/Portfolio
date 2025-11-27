@@ -4,17 +4,23 @@ This project builds a computer vision system that analyses football footage usin
 
 The system combines YOLOv8 object detection, OpenCV tracking, and K-Means colour clustering to identify players, assign them to teams based on shirt colour, and applies optical flow and perspective transformation to convert pixel movement into real-world metrics. Annotated match footage is then saved with all insights overlaid.
 
-## Raw footage
+## Workflow
+- Raw footage
+
 ![1](<static/projects/ML Football Analysis/1.gif>)
 
-## Detect and track players, referees, and the ball using YOLOv8
+- Detect and track players, referees, and the ball using YOLOv8
+
 ![2](<static/projects/ML Football Analysis/2.gif>)
 
-## Identify team colours and assign players to teams with K-Means clustering
+- Identify team colours and assign players to teams with K-Means clustering
+
 ![3](<static/projects/ML Football Analysis/3.gif>)
 
-## Detect ball possession for each team frame by frame
+- Detect ball possession for each team frame by frame
+
 ![4](<static/projects/ML Football Analysis/4.gif>)
 
-## Use perspective transformation to measure player speed and distance in metres
+- Use perspective transformation to measure player speed and distance in metres (final output)
+
 ![5](<static/projects/ML Football Analysis/5.gif>)
