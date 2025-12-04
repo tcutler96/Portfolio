@@ -42,6 +42,6 @@ site_data = get_site_data()
 if __name__ == '__main__':
     app.debug = True
     host, port = '127.0.0.1', 5000
-    app.run(host=host, port=port)
-    # server = Server(app.wsgi_app)
-    # server.serve(host=host, port=port)
+    # app.run(host=host, port=port)
+    server = Server(app.wsgi_app)
+    server.serve(host=host, port=port)

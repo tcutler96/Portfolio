@@ -7,12 +7,17 @@
     --transition_length: 0.5s;
 }
 
-html {
-    overflow-y: scroll;
-}
-
 *, *:hover {
     transition: all var(--transition_length);
+}
+
+html {
+    overflow-y: scroll;
+    overflow: auto;
+    overscroll-behavior: none;
+    background: linear-gradient(90deg, rgb(200, 200, 200), var(--secondary_colour), rgb(200, 200, 200));
+    background-size: 200% 200%;
+    animation: background_gradient 30s ease infinite;
 }
 
 body {
@@ -20,10 +25,9 @@ body {
     font-family: sans-serif;
     margin: 24px 0;
     letter-spacing: 1px;
-/*    background: var(--secondary_colour);*/
-    background: linear-gradient(90deg, rgb(200, 200, 200), var(--secondary_colour), rgb(200, 200, 200));
-    background-size: 200% 200%;
-    animation: background_gradient 30s ease infinite;
+    overflow: auto;
+    overscroll-behavior: none;
+    background: transparent;
 }
 
 @keyframes background_gradient {
